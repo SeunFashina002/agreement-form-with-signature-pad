@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Terms and condition</title>
+
+    <link rel="icon" href="/img/icons.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="/Js/script.js"></script>
+    <script src="/Js/jquery.js"></script>
+    <script src="/Js/jSignature.min.js"></script>
+    <script src="/Js/modernizr.js"></script>
+
+    <link rel="stylesheet" href="/Css/style.css" />
+  </head>
+  <body>
+    <section class="p-1">
+      <div class="container">
+        <form class="agreement-form">
+          <h1 class="text-center mb-5 text-uppercase">agreement Form</h1>
+
+          I <input class="agreement-input" type="text" /> accepts
+          <ul class="agreement-list">
+            <li>That I am the above named person</li>
+            <li>
+              That I am aware of <span class="h5">NAME OF ORGANIZATION.</span>
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum,
+              ratione..
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis quaerat itaque aut saepe temporibus sint quidem facilis
+              consequatur reiciendis pariatur?
+            </li>
+            <li>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi,
+              saepe!
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis,
+              corporis.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Asperiores, alias?
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius,
+              numquam!
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab,
+              optio.
+            </li>
+            <li>
+              That I am aware the deposit covers Admission fee/ Initial process
+            </li>
+            <li>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quod,
+              officia.
+            </li>
+            <li>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Accusamus, velit!
+            </li>
+            <li>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Excepturi, praesentium.
+            </li>
+            <li>That this agreement is now needed for record purpose</li>
+          </ul>
+
+          <div class="mt-5">
+            <div id="signature" class="signatured-pad"></div>
+
+            <button
+              type="button"
+              class="btn btn-warning mt-3 mb-5"
+              id="preview"
+            >
+              Send
+            </button>
+          </div>
+
+          <div class="img-sign mb-0">
+            <img class="mb-0" id="signaturePreview" src="" alt="" />
+          </div>
+          <a>
+            <input class="mt-o pt-0 agreement-input" type="text" />
+          </a>
+          <p>Applicant Signature</p>
+
+          <button
+            class="btn btn-warning btn-block mb-3 mt-5 btn-login"
+            type="submit"
+          >
+            submit
+          </button>
+        </form>
+      </div>
+
+      <script type="text/javascript">
+        var signature = $("#signature").jSignature({ UndoButton: true });
+
+        $("#preview").click(function () {
+          var data = signature.jSignature("getData", "image");
+          $("#signaturePreview").attr("src", "data:" + data);
+        });
+
+        $("#download").click(function () {
+          var image = $("#signaturePreview")[0];
+          this.href = image.src;
+        });
+      </script>
+    </section>
+  </body>
+</html>
